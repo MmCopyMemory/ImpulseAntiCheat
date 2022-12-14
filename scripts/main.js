@@ -3,6 +3,7 @@ import * as mcg from "@minecraft/server-ui";
 import * as cf from "./config";
 import {Anti32k} from "./modules/illench";
 
+
 mc.system.runSchedule(a => {
     //USELESS TICKEVENT
 })
