@@ -33,30 +33,40 @@ function CmdHandler(command, arg, text, player) {
                 break;
             }
         case 'ban':
+            if(player.hasTag("staff")){
             player.runCommandAsync(`tag "${arg[0]}" add BANNED`)
+            }
         break;
         case 'adkit':
+            if(player.hasTag("staff")){
             player.runCommandAsync("structure load admintoolkit ~~~ 0_degrees none false true")
+            }
             break;
         case 'kickall':
-            player.runCommandAsync("say KICK ALL DISABLED")
+            player.runCommandAsync("tell @s KICK ALL DISABLED")
         break;
         case 'trail':
+            if(player.hasTag("trailallow")){
             player.runCommandAsync("tag @s add trail1")
+            }
         break;
         case 'ui':
+            if(player.hasTag("staff")){
             player.runCommandAsync("tag @s add open-ui-cooldown")
+            }
             break;
         case 'help':
             player.tell("§6COMMAND LIST>\n§cGET MORE HELP ON THE DISCORD.\nhttps://discord.gg/52ysDPrTAd\n§rdebug §e<debugmsg>§r\nui\nban §a<target>§r\nunban §a<target>\n§rtrail §a<<DONOR ONLY>>§r\nadkit\nkickall")
         break;
         case 'unban':
+            if(player.hasTag("staff")){
             player.tell("§4NOTE: NAMES WITH SPACES CURRENTLY NOT SUPPORTED!")
             if(arg[0] == undefined){
                 player.tell("§4§lPLEASE ENTER A USERNAME!")
             } else {
             player.tell("Succesfully added " + arg[0] + " to unban queue")
             cf.ttklog.push(arg[0].toLowerCase());
+            }
             }
         break;
         case 'logs':
@@ -77,12 +87,6 @@ function CmdHandler(command, arg, text, player) {
             if(loggad.includes(player.nameTag)){
                 player.tell("included")
             } else { player.tell("not included") }
-            break;
-        case 'debug':
-            player.runCommandAsync(`say debug ${arg[0]}`)
-            break;
-        case `uied`:
-            player.runCommandAsync("say hello")
             break;
         default:
             player.tell("§cCommand §6" + command + " §cnot found. try [prefix]help")
@@ -142,7 +146,7 @@ mc.world.events.beforeChat.subscribe(e => {
     }
 
     if(msg.startsWith(".ui")){
-        if(sender.hasTag("op")){
+        if(sender.hasTag("staff")){
             sender.runCommandAsync("tag @s add open-ui-cooldown")
             e.cancel = true;
         } else {
@@ -258,7 +262,7 @@ mc.system.runSchedule(()=>{
             unbanui.textField(`PLAYERS USERNAME`, `SomeBannedUser`)
             const creditui = new mcg.ModalFormData()
             creditui.title("§aCREDITS")
-            creditui.slider("This AntiCheat has been made by\ndvl#0132\nCl0udPvP#6467\nAnd iBlqzed#3612\nThis AntiCheat took us a long time\nto develop since dvl was too lazy\nTo finish it.\nWe hope you like this AntiCheat.\nVersion",1,1,1,1)
+            creditui.slider("This AntiCheat has been made by\ndvl#0132\nCl0udPvP#6467\nThis AntiCheat took us a long time\nto develop since dvl was too lazy\nTo finish it.\nWe hope you like this AntiCheat.\nVersion",1,1,1,1)
            creditui.button
             const ui = new mcg.ModalFormData()
             .title(`§4§lANNOUNCEMENTS §r§k§ooo`)
