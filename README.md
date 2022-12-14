@@ -1,6 +1,7 @@
 # Impulse AntiCheat
 ## GUIDE AT THE BOTTOM!
 
+### **STAFF TAG IS ```staff```**
 
 # ToDo
 - [ ] Anti nested
