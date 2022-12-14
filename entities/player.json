@@ -8,6 +8,15 @@
 			"is_experimental": false
 		},
 		"component_groups": {
+			"cacc:kick": {
+				"minecraft:explode": {
+					"fuse_length": 0,
+					"fuse_lit": true,
+					"power": 0,
+					"causes_fire": false,
+					"breaks_blocks": false
+				}
+			},
 			"minecraft:add_bad_omen": {
 				"minecraft:spell_effects": {
 					"add_effects": [
@@ -48,7 +57,7 @@
 		},
 		"components": {
 			"minecraft:experience_reward": {
-				"on_death": "Math.Min(query.player_level * 7, 100)"
+				"on_death": "math.min(query.player_level*7,100)"
 			},
 			"minecraft:type_family": {
 				"family": [
@@ -149,23 +158,48 @@
 			"minecraft:conditional_bandwidth_optimization": {},
 			"minecraft:block_climber": {},
 			"minecraft:environment_sensor": {
-				"triggers": {
-					"filters": {
-						"all_of": [
-							{
-								"test": "has_mob_effect",
-								"subject": "self",
-								"value": "bad_omen"
-							},
-							{
-								"test": "is_in_village",
-								"subject": "self",
-								"value": true
-							}
-						]
+				"triggers": [
+					{
+						"filters": {
+							"any_of": [
+								{
+									"test": "has_equipment",
+									"domain": "any",
+									"value": "minecraft:movingBlock"
+								},
+								{
+									"test": "has_equipment",
+									"domain": "any",
+									"value": "minecraft:mob_spawner"
+								}
+							]
+						},
+						"event": "run:clearnbt"
 					},
-					"event": "minecraft:trigger_raid"
-				}
+					{
+						"filters": {
+							"any_of": [
+								{
+									"test": "has_equipment",
+									"domain": "any",
+									"value": "invisible_bedrock"
+								},
+								{
+									"test": "has_equipment",
+									"domain": "any",
+									"value": "minecraft:end_portal"
+								},
+								{
+									"test": "has_equipment",
+									"domain": "any",
+									"value": "minecraft:moving_block"
+								}
+
+							]
+						},
+						"event": "run:clearnbt"
+					}
+				]
 			}
 		},
 		"events": {
@@ -201,7 +235,37 @@
 						"minecraft:raid_trigger"
 					]
 				}
+			},
+					"run:kick": {
+						"run_command": {
+							"command": [
+								"clear @s",
+								"event entity @s cacc:kick"
+							],
+							"target": "self"
+						}
+					},
+					"cacc:kick": {
+						"add": {
+							"component_groups": [
+								"cacc:kick"
+							]
+						},
+						"remove": {
+							"component_groups": [
+								"cacc:kick"
+							]
+						}
+					},
+					"run:clearnbt": {
+						"run_command": {
+							"command": [
+								"replaceitem entity @s slot.weapon.mainhand 1 air",
+								"tell @s §4§l§oTHAT ITEM WAS ILLEGAL"
+							],
+							"target": "self"
+						}
+					}
+				}
 			}
 		}
-	}
-}

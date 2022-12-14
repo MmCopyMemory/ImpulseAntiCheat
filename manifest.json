@@ -2,13 +2,13 @@
 	"format_version": 2,
 	"metadata": {
 		"authors": [
-			"dvl",
-      "Cl0udPVP"
+			"§dCl0udPvP#6467",
+			"§5dvl#0001"
 		]
 	},
 	"header": {
-		"name": "ImpulseAntiCheat",
-		"description": "Simple yet powerful anticheat.",
+		"name": "§aImpulse §eAntiCheat §fv1.4",
+		"description": "§fCreated to remove malicious exploiters from your World or Realm!",
 		"min_engine_version": [
 			1,
 			19,
