@@ -1,7 +1,6 @@
 # Impulse AntiCheat
 ## GUIDE AT THE BOTTOM!
 
-![This is an image](https://github.com/dvlq/ImpulseAntiCheat/blob/main/githubbanner.png?raw=true)
 
 # ToDo
 - [ ] Anti nested
