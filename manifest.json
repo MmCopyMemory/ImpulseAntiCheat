@@ -7,7 +7,7 @@
 		]
 	},
 	"header": {
-		"name": "§aImpulse §eAntiCheat §fv1.4",
+		"name": "§aImpulse §eAntiCheat §fv1.5",
 		"description": "§fCreated to remove malicious exploiters from your World or Realm!",
 		"min_engine_version": [
 			1,
@@ -17,7 +17,7 @@
 		"uuid": "613984f2-c18e-4019-a8dd-567057010f40",
 		"version": [
 			1,
-			0,
+			5,
 			0
 		]
 	},
@@ -27,7 +27,7 @@
 			"uuid": "9059b72f-6d7e-4f43-8cc8-baea0c1f464a",
 			"version": [
 				1,
-				0,
+				5,
 				0
 			]
 		},
@@ -38,7 +38,7 @@
 			"entry": "scripts/main.js",
 			"version": [
 				1,
-				0,
+				5,
 				0
 			]
 		}
