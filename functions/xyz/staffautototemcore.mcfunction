@@ -1,0 +1,1 @@
+replaceitem entity @a[tag=staff] slot.weapon.offhand 0 minecraft:totem_of_undying 1
