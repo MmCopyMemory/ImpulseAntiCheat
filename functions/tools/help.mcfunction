@@ -27,6 +27,11 @@ tellraw @s {"rawtext":[{"text":"§f                                           "}
 tellraw @s {"rawtext":[{"text":"§dHelp §f- §eShows you a list of commands and their functions."}]}
 tellraw @s {"rawtext":[{"text":"§dVanish §f- §eMakes you invisible to other players and allows you to phase through blocks."}]}
 tellraw @s {"rawtext":[{"text":"§dInvincibility §f- §eMakes you and other staff members completely invincible."}]}
+tellraw @s {"rawtext":[{"text":"§dPunish §f- §eClears a player's inventory, Ender Chest and kills them."}]}
+tellraw @s {"rawtext":[{"text":"§a/execute at <player> run /function tools/punish"}]}
+tellraw @s {"rawtext":[{"text":"§dModules §f- §eShows a list of enabled modules."}]}
+tellraw @s {"rawtext":[{"text":"§dPlayer Staff §f- §eGives staff to a normal player."}]}
+tellraw @s {"rawtext":[{"text":"§a/execute at <player> run /function tools/playerstaff"}]}
 tellraw @s {"rawtext":[{"text":"§f                                           "}]}
 tellraw @s {"rawtext":[{"text":"§f --------- §aImpulse Gametest §f---------- "}]}
 tellraw @s {"rawtext":[{"text":"§f           §a                  §f          "}]}
