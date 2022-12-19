@@ -181,6 +181,7 @@ mc.system.runSchedule(e => {
     mc.world.getAllPlayers().forEach(player => {
                 //Get inventory component
         if(!player.hasTag("staff")){
+        if(!getScore(player,"Anti32k") == 1) {
         const inv = player.getComponent("inventory").container, { size } = inv
                 //Getting items of all inventory slots
         for (let i = 0; i < size; i++) {
@@ -188,6 +189,7 @@ mc.system.runSchedule(e => {
             const item = inv.getItem(i)
                     //Anti Illegal Enchants
             if (1 == 1) Anti32k(player, item, i)
+        }
         }
     }
     if(player.hasTag("32kd")){
