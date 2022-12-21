@@ -1,0 +1,6 @@
+diagnostic.disable.behaviorpack.entity.missing=true
+diagnostic.disable.minecraft.mode.gamemodes.invalid=true
+diagnostic.disable.general.integer.invalid=true
+diagnostic.disable.debugger.internal.exception=true
+diagnostic.disable.debugger.internal.exception=true
+diagnostic.disable.debugger.internal.exception=true
