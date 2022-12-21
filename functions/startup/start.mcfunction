@@ -14,8 +14,8 @@ scoreboard objectives add entityclear dummy
 scoreboard players set @a[tag=staff] entityclear 0
 scoreboard objectives add hotbarmessage dummy
 scoreboard players set @a[tag=staff] hotbarmessage 0
-scoreboard objectives add anti32k dummy
-scoreboard players set @a[tag=staff] anti32k 0
+scoreboard objectives add Anti32k dummy
+scoreboard players set @a[tag=staff] Anti32k 0
 
 scoreboard objectives add entitiesmodule dummy
 scoreboard objectives add entities dummy
