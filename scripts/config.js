@@ -1,0 +1,9 @@
+export const debug = "true";              //debug
+export const debug1 = "true";             //debug
+export const antislur = "true";           //Anti swears
+export const anti32k = "true";            //Removes non vanilla enchants
+export const antinoclip = "true";         //Anti No Clip
+export const antiautoclicker = "true";    //AntiAC//EXPERIMENTAL
+export const maxcps = "69";               //MaxCPS until antiac triggers//EXPERIMENTAL
+export const ban324 = "false";            //If player gets banned on 4th 32k flag
+export var ttklog = ["testlog1","testlog2"]
